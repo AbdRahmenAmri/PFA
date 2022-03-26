@@ -1,0 +1,56 @@
+#logo{
+    position: relative;
+    padding: 7px 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+#logo::before{
+    content: '';
+    width: 40%;
+    height: 100%;
+    left: 5%;
+    top: 29%;
+    position: absolute;
+    border-top: 4px #f1f1f1 solid;
+}
+
+#logo::after{
+    content: '';
+    width: 40%;
+    height: 100%;
+    right: 5%;
+    bottom: 29%;
+    position: absolute;
+    border-bottom: 4px #f1f1f1 solid;
+}
+
+#logo .w1{
+    z-index: 3;
+    font-size: 1rem;
+    color: var(--secondaryColor);
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+#logo .X{
+    z-index: 2;
+    font-weight: 900;
+    color: #f1f1f1;
+    font-size: 2.5rem;
+}
+
+#logo .w2{
+    margin-top: 0;
+    z-index: 1;
+    color: var(--thirdColor);
+    text-transform: uppercase;
+    font-size: 1rem;
+}

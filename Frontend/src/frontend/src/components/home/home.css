@@ -1,0 +1,17 @@
+img{
+    image-rendering: crisp-edges;
+}
+body{
+    background-color: var(--primaryColor)
+}
+
+h1{
+    color: var(--secondaryColor);
+}
+
+h3{
+    color: var(--thirdColor);
+}
+p{
+    color: #f1f1f1;
+}
