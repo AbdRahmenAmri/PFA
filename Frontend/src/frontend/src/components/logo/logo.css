@@ -1,6 +1,6 @@
 #logo{
+    margin: 7px 14px;
     position: relative;
-    padding: 7px 14px;
     box-sizing: border-box;
     overflow: hidden;
     width: fit-content;
@@ -15,8 +15,8 @@
     content: '';
     width: 40%;
     height: 100%;
-    left: 5%;
-    top: 29%;
+    left: 7px;
+    top: 10px;
     position: absolute;
     border-top: 4px #f1f1f1 solid;
 }
@@ -25,15 +25,14 @@
     content: '';
     width: 40%;
     height: 100%;
-    right: 5%;
-    bottom: 29%;
+    right: 8px;
+    bottom: 11px;
     position: absolute;
     border-bottom: 4px #f1f1f1 solid;
 }
 
 #logo .w1{
-    z-index: 3;
-    font-size: 1rem;
+    font-size: 18px;
     color: var(--secondaryColor);
     text-transform: uppercase;
     margin-bottom: 0;
@@ -41,16 +40,75 @@
 }
 
 #logo .X{
-    z-index: 2;
     font-weight: 900;
     color: #f1f1f1;
-    font-size: 2.5rem;
+    font-size: 35px;
 }
 
 #logo .w2{
     margin-top: 0;
-    z-index: 1;
     color: var(--thirdColor);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 18px;
 }
+
+
+@media screen and (max-width:900px) {
+    #logo .X{
+        font-size: 30px;
+    }
+    
+    #logo .w1,#logo .w2{
+        font-size: 14px;
+    }
+    #logo::before{
+        content: '';
+        width: 40%;
+        height: 100%;
+        left: 6px;
+        top: 9px;
+        position: absolute;
+        border-top: 4px #f1f1f1 solid;
+    }
+    
+    #logo::after{
+        content: '';
+        width: 40%;
+        height: 100%;
+        right: 6px;
+        bottom: 10px;
+        position: absolute;
+        border-bottom: 4px #f1f1f1 solid;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    #logo .X{
+        font-size: 25px;
+    }
+    
+    #logo .w1,#logo .w2{
+        font-size: 11px;
+    }
+    #logo::before{
+        content: '';
+        width: 40%;
+        height: 100%;
+        left: 4px;
+        top: 6px;
+        position: absolute;
+        border-top: 4px #f1f1f1 solid;
+    }
+    
+    #logo::after{
+        content: '';
+        width: 40%;
+        height: 100%;
+        right: 4px;
+        bottom: 8px;
+        position: absolute;
+        border-bottom: 4px #f1f1f1 solid;
+    }
+}
+

@@ -1,0 +1,138 @@
+.navbar{
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-block: 1vh;
+    display: grid;
+    grid-template-columns: 200px auto 250px;
+    align-items: center;
+    background-color: var(--primaryColor);
+    box-shadow: 0 5px 20px 3px rgba(255, 255, 255, .05);
+}
+
+.navbar .nav{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    justify-self: center;
+}
+
+.navbar .nav li{
+    cursor: pointer;
+    font-size: .9em;
+    padding: 7px 14px;
+    color: var(--secondaryColor);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-inline: 10px;
+    border-bottom: 3px solid var(--secondaryColor);
+    letter-spacing: 2px;
+}
+.navbar .nav li.active{
+    color: var(--thirdColor);
+    border-bottom: 3px solid var(--thirdColor);
+
+}
+.loginorregister{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+span{
+    align-self: flex-end;
+    font-size: .5em;
+    color: #fff;
+    margin-inline: 5px;
+    letter-spacing: 1px;
+}
+
+#login{
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 800;
+    color: var(--thirdColor);
+}
+#register{
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 7px 14px;
+    background-color: var(--thirdColor);
+    border-radius: 8px;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home .text h1{
+    color: var(--secondaryColor);
+    text-transform: capitalize;
+    font-size: 2.5em;
+}
+#home .text h1 span{
+    color: var(--thirdColor);
+    text-transform: uppercase;
+    font-size: .9em;
+    text-shadow: 0 0 20px var(--secondaryColor);
+}
+#home .text p{
+    margin-left: 30px;
+    border-left: 6px solid var(--secondaryColor);
+    padding-left: 15px;
+    width: 80%;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    font-size: .9em;
+    margin-top: -20px;
+    border-radius: 5px;
+}
+#home .text p span{
+    color: gold;
+    text-transform: capitalize;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px gold;
+}
+
+#home #join{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    background-color: var(--thirdColor);
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+}
+
+#home img{
+    width: 30%;
+}
