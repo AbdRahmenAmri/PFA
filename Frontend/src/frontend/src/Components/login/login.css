@@ -30,6 +30,7 @@
 .main .container_login .right_div h2{
     color: #42C2FF;
     font-size: 40px;
+
 }
 
 .main .container_login .right_div form{
@@ -112,4 +113,106 @@
 
 .main .container_signin .left_div img{
     width: 400px;
+}
+
+
+
+
+@media (max-width: 575.98px) { 
+
+
+   .main .container_login { 
+       height: 90%;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    width: 100%; 
+    justify-content: center;
+    
+ }
+ .main .container_login .right_div { 
+    width: 90%;
+    height: 65%;
+}
+ .main .container_login .right_div form{
+    height: 320px;
+
+}
+
+    .main .container_login .left_div{ 
+        height: 25%;
+    }
+   .main .container_login .left_div h4
+        {
+            display: none ;
+
+        }
+ .main .container_login .right_div h2{
+            color: #42C2FF;
+            font-size: 40px;
+            
+        }    
+ .main .container_login .left_div h1{ 
+     display: none;
+ }
+ .main .container_login .right_div form input:not(.registerButton){
+    width: 260px;
+}
+    
+ }
+ 
+
+@media (min-width: 576px ) and (max-width: 767.98px) { 
+     .main .container_login { 
+       height: 90%;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    width: 100%; 
+    justify-content: center;
+    
+ }
+ .main .container_login .right_div { 
+    width: 90%;
+    height: 65%;
+}
+ .main .container_login .left_div h4
+ {
+     display: none ;
+
+ }
+ .main .container_login .left_div h1{ 
+    display: none;
+}
+.main .container_login .left_div{ 
+    height: 25%;
+}
+ }
+
+
+@media (min-width: 768px ) and  (max-width: 991.98px) {  
+    .main .container_login{
+        width: 740px;
+       
+    }
+    .main .container_login .right_div form{
+        height: 240px;
+    
+    }
+    .main .container_login .left_div h4 { 
+        font-size: 30px;
+    }
+    .main .container_login .right_div form input:not(.registerButton){
+        width: 240px;
+    }
+ }
+@media (min-width :992px) and (max-width: 1224.98px) {  
+    .main .container_login{
+        width: 950px;
+       
+    }
+    .main .container_login .left_div h4 { 
+        font-size: 34px;
+    }
+    .main .container_login .left_div h1 { 
+        font-size: 40px;
+    }
 }
