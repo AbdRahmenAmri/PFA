@@ -148,6 +148,10 @@
 
     }
 
+    .main .container_signin .right_div form small{
+        margin: -10px 0 0 28px;
+    }
+
     .main .container_signin .left_div h1 {
         display: none;
     }
