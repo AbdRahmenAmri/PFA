@@ -6,7 +6,8 @@ import axios from 'axios'
 function SignIn() {
 
   const[registerForm,setRegisterForm] = useState({
-    fullName : "",
+    firstName : "",
+    lastName : "",
     email :"",
     password : "",
     confirmePassword : ""
@@ -16,18 +17,29 @@ function SignIn() {
     const{name , value} = e.target
     setRegisterForm(prevValue=>{
         switch (name) {
-          case "fullName":
+          case "firstName":
 
               return{
-                fullName : value,
+                firstName : value,
+                lastName : prevValue.email,
                 email : prevValue.email,
                 password : prevValue.password,
                 confirmePassword : prevValue.confirmePassword
               }
 
+          case "lastName":
+            return{
+              firstName : prevValue.firstName,
+              lastName : value,
+              email : prevValue.email,
+              password : prevValue.password,
+              confirmePassword : prevValue.confirmePassword
+            }
+
           case "email":
             return{
-              fullName : prevValue.fullName,
+              firstName : prevValue.firstName,
+              lastName : prevValue.email,
               email : value,
               password : prevValue.password,
               confirmePassword : prevValue.confirmePassword
@@ -35,7 +47,8 @@ function SignIn() {
 
           case "password":
             return{
-              fullName : prevValue.fullName,
+              firstName : prevValue.firstName,
+              lastName : prevValue.lastName,
               email : prevValue.email,
               password : value,
               confirmePassword : prevValue.confirmePassword
@@ -43,7 +56,8 @@ function SignIn() {
             
           case "confirmePassword":
             return{
-              fullName : prevValue.fullName,
+              firstName : prevValue.firstName,
+              lastName : prevValue.lastName,
               email : prevValue.email,
               password : prevValue.password,
               confirmePassword : value
@@ -53,10 +67,11 @@ function SignIn() {
             break;
         }
     })
+
   }
 
   function handleVerif(){
-    if((registerForm.fullName.length ===0)|| (registerForm.email.indexOf("@")===-1)||(registerForm.password.length<8)||(registerForm.confirmePassword.length<8)||(registerForm.password !== registerForm.confirmePassword)){
+    if((registerForm.firstName.length ===0)|| (registerForm.email.indexOf("@")===-1)||(registerForm.password.length<8)||(registerForm.confirmePassword.length<8)||(registerForm.password !== registerForm.confirmePassword)){
       return false
     }else{
       return true
@@ -79,6 +94,7 @@ function SignIn() {
       s.style.display = "block"
     })
    }
+   console.log(registerForm);
   }
 
   return (
@@ -93,7 +109,9 @@ function SignIn() {
       <div className='right_div'>
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="fullName" placeholder='FullName' onBlur={handleVerif} onChange={handleChange}/>
+          <input type="text" name="firstName" placeholder='FirstName' onBlur={handleVerif} onChange={handleChange}/>
+          <small>your name should be more than 0 characters</small>
+          <input type="text" name="lastName" placeholder='lastName' onBlur={handleVerif} onChange={handleChange}/>
           <small>your name should be more than 0 characters</small>
           <input type="email" name="email" placeholder='Email' onBlur={handleVerif}  onChange={handleChange}/>
           <small>email should conatin "@" , "." !</small>
