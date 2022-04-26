@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.main {
+    background-color: #42C2FF;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.main .container_signin {
+    width: 1215px;
+    height: 560px;
+    margin: 50px auto;
+    display: flex;
+    box-shadow: 0px 0px 22px -13px black;
+    font-family: 'Inter', sans-serif;
+}
+
+.main .container_signin .right_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+}
+
+.main .container_signin .right_div h2 {
+    color: #42C2FF;
+    font-size: 40px;
+}
+
+.main .container_signin .right_div form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    align-items: center;
+}
+
+.main .container_signin .right_div form input:not(.registerButton) {
+    border: 2px solid #42C2FF;
+    border-radius: 7px;
+    padding: 10px;
+    width: 311px;
+}
+
+.main .container_signin .right_div form input[type=submit] {
+    background-color: #42C2FF;
+    color: white;
+    border-radius: 20px;
+    width: 341px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main .container_signin .right_div form a {
+    background-color: #44c0fa3b;
+    padding: 10px;
+    width: 325px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.main .container_signin .right_div form small {
+    color: red;
+    align-self: flex-start;
+    margin: -10px 0 0 10px;
+    display: none;
+}
+
+.main .container_signin .left_div {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #42C2FF;
+}
+
+.main .container_signin .left_div h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 54px;
+}
+
+.main .container_signin .left_div h4 {
+    color: white;
+    font-size: 40px;
+}
+
+.main .container_signin .left_div p {
+    width: 620px;
+    color: white;
+}
+
+.main .container_signin .left_div img {
+    width: 400px;
+}
+
+
+
+
+@media (max-width: 575.98px) {
+
+
+    .main .container_signin {
+        height: 90%;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .main .container_signin .right_div {
+        width: 90%;
+        height: 65%;
+    }
+
+
+    .main .container_signin .left_div {
+        height: 25%;
+    }
+
+    .main .container_signin .left_div img {
+        width: 100%;
+    }
+
+    .main .container_signin .left_div h4 {
+        display: none;
+
+    }
+
+    .main .container_signin .right_div h2 {
+        color: #42C2FF;
+        font-size: 40px;
+
+    }
+
+    .main .container_signin .right_div form small{
+        margin: -10px 0 0 28px;
+    }
+
+    .main .container_signin .left_div h1 {
+        display: none;
+    }
+
+    .main .container_signin .right_div form input:not(.registerButton) {
+        width: 80%;
+    }
+
+    .main .container_signin .right_div form input[type=submit] {
+        width: 80%;
+
+    }
+
+    .main .container_signin .right_div form a {
+        width: 80%;
+
+    }
+
+    .main .container_signin .right_div form {
+        width: 100%;
+
+    }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .main .container_signin {
+        height: 90%;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .main .container_signin .right_div {
+        width: 90%;
+        height: 65%;
+    }
+
+    .main .container_signin .left_div h4 {
+        display: none;
+
+    }
+
+    .main .container_signin .left_div h1 {
+        display: none;
+    }
+
+    .main .container_signin .left_div {
+        height: 25%;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main .container_signin {
+        width: 740px;
+
+    }
+
+    .main .container_signin .right_div form {
+        height: 340px;
+
+    }
+
+    .main .container_signin .left_div h4 {
+        font-size: 30px;
+    }
+
+    .main .container_signin .right_div form input:not(.registerButton) {
+        width: 240px;
+    }
+
+    .main .container_signin .right_div form input[type=submit] {
+        width: 264px;
+
+    }
+
+    .main .container_signin .right_div form a {
+        width: 240px;
+
+    }
+}
+
+@media (min-width :992px) and (max-width: 1224.98px) {
+    .main .container_signin {
+        width: 950px;
+
+    }
+
+    .main .container_signin .left_div h4 {
+        font-size: 34px;
+    }
+
+    .main .container_signin .left_div h1 {
+        font-size: 40px;
+    }
+}
