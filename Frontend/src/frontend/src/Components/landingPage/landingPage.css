@@ -250,12 +250,14 @@ section{
 }
 
 #testominals{
-    display: grid;
-    place-items: center;
+    position: relative;
 }
 
 #testominals .container{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 80vw;
     height: 70vh;
     background-color: #fff;
@@ -265,6 +267,9 @@ section{
     justify-content: space-between;
 }
 #testominals .container .big{
+    display: grid;
+    place-items: center;
+    font-size: 80px;
     padding: 50px;
     width: 100px;
     height: 100px;
@@ -401,6 +406,9 @@ section{
 }
 #testominals .container .content .main .topleft{
     position: absolute;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
     top: -20px;
     left: -20px;
     color: var(--thirdColor);
@@ -408,6 +416,9 @@ section{
     height: 30px;
 }
 #testominals .container .content .main .bottomright{
+    display: grid;
+    place-items: center;
+    font-size: 24px;
     bottom: -20px;
     right: -20px;
     position: absolute;
@@ -427,6 +438,9 @@ section{
     width: 100px;
 }
 #testominals .container .content .arrows .arrowleft,#testominals .container .content .arrows .arrowright{
+    display: grid;
+    place-items: center;
+    font-size: 24px;
     width: 24px;
     height: 100%;
     background-color: #333;
@@ -434,16 +448,6 @@ section{
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-}
-#testominals .container .content .arrows .arrowleft::before,#testominals .container .content .arrows .arrowright::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-
 }
 
 #testominals .container .content .arrows .arrowleft.disable,#testominals .container .content .arrows .arrowright.disable{

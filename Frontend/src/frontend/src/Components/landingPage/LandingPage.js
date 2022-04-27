@@ -1,14 +1,24 @@
 import Logo from '../logo/logo'
+
 import Footer from '../footer/footer'
 import select from './select.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './landingPage.css'
+
+
+import { Link } from 'react-router-dom'
+
+
+
+import $ from 'jquery'
+import React, {useRef} from 'react'
 
 
 
 const LandingPage = () => {
   Object.filter = (obj, predicate) => Object.fromEntries(Object.entries(obj).filter(predicate));
+  const leftArrow = useRef();
+  const rightArrow = useRef();
+  const users = useRef();
   class Testominal {
     constructor(){
       this.testominals = [
@@ -46,6 +56,9 @@ const LandingPage = () => {
         }
       ];
     }
+
+    var 
+
     ListPic = ()=>{
       this.testominals.map(user =>{
         if(this.testominals[0] === user){
@@ -53,6 +66,11 @@ const LandingPage = () => {
         }else return <div className="box" key={user.id}><img src={user.data.pic} alt="" /></div>
       })
     }
+
+    get first(){
+      return {name: this.testominals[0].data.name,paragraph:this.testominals[0].data.paragraph}
+    }
+
     get name(){
       return this.filterById().data.name;
     }
@@ -61,8 +79,7 @@ const LandingPage = () => {
 
     }
     get key(){
-      console.log(document.querySelector('.box.active'))
-      return parseInt(document.querySelector('.box.active').key);
+      return parseInt($('.box.active').attr('data-key'));
     }
 
     filterById(){
@@ -77,7 +94,7 @@ const LandingPage = () => {
 
   const arrow = (e) => {
     let disable = false;
-    let x = ((e.target.parentNode).parentNode).querySelector('.users');
+    let x = users.current;
     let transX = parseInt(window.getComputedStyle(x).transform.split(',')[4]) || 0;
     let siblings = [e.target.previousSibling , e.target.nextSibling];
     for(let sibling of siblings){
@@ -180,14 +197,10 @@ const LandingPage = () => {
             <li onClick={clickNav}>Testominals</li>
           </a>
         </ul>
-        <div className="loginorregister">
-          <span id="login">
-            Login
-          </span>
+        <div className="loginorregister">          
+          <Link to='/login'><span id="login">Login</span></Link>
           <span>OR</span>
-          <span id="register">
-            Register
-          </span>
+          <Link to='/register'><span id="register">Register</span></Link>
         </div>
       </div>
       <section id="home">
@@ -243,36 +256,38 @@ const LandingPage = () => {
       </section>
       <section id="testominals">
         <div className="container">
-          <FontAwesomeIcon icon={faQuoteLeft} className="big" />
+        <i className="big fa-solid fa-quote-left"></i>
           <aside>
             <h1>what people are saying </h1>
             <p>only members can submit their opinion about us. <br />what are waiting for join us</p>
           </aside>
           <div className="content">
-            <div className="users">
+            <div className="users" ref={users}>
               {
                 instanceTestominals.testominals.map(user =>{
                   if(instanceTestominals.testominals[0] === user){
                     return <div className="box active" key={user.id} data-key={user.id}><img src={user.data.pic} alt="" /></div>
                   }else return <div className="box" key={user.id}  data-key={user.id}><img src={user.data.pic} alt="" /></div>
                 })
+
               }
 
             </div>
             <q className="main">
-              <h1 id="name">Your Name</h1>
-              <FontAwesomeIcon icon={faQuoteLeft} className="topleft" />
-              <span id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore inventore voluptas illo corporis nisi rerum explicabo, blanditiis tempora totam culpa dolore eos natus! Libero error laboriosam commodi odio saepe fugiat?</span>
-              <FontAwesomeIcon icon={faQuoteLeft} className="bottomright" />
+              <h1 id="name">{instanceTestominals.first.name}</h1>
+              <i className="topleft fa-solid fa-quote-left"></i>
+              <span id="paragraph">{instanceTestominals.first.paragraph}</span>
+              <i className="bottomright fa-solid fa-quote-left"></i>
             </q>
             <div className="arrows">
-              <FontAwesomeIcon icon={faArrowLeft} className="arrowleft disable" onClick={arrow} />
-              <FontAwesomeIcon icon={faArrowRight} className="arrowright" onClick={arrow} />
+            <i className="arrowleft disable fa-solid fa-arrow-left" onClick={arrow} ref={leftArrow}></i>
+            <i className="arrowright fa-solid fa-arrow-right" onClick={arrow} ref={rightArrow}></i>
             </div>
           </div>
         </div>
       </section>
       <Footer/>
+
     </>
   )
 }
