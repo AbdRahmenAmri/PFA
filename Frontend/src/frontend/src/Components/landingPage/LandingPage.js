@@ -200,7 +200,7 @@ const LandingPage = () => {
         <div className="loginorregister">          
           <Link to='/login'><span id="login">Login</span></Link>
           <span>OR</span>
-          <Link to='/register'><span id="register">Register</span></Link>
+          <Link to='/Signin'><span id="register">Register</span></Link>
         </div>
       </div>
       <section id="home">
@@ -211,7 +211,9 @@ const LandingPage = () => {
           </h1>
           <p>Lezem X Lezem is a platform that provide Articles, Posts, Courses only that you care about stop losing time by reading scrolling the trush<br />
             <span>You are a gold member deserve a gold articles.</span></p>
-          <button id="join">Join Us</button>
+          <Link to='/Signin'><button id="join">Join Us</button></Link>
+
+          
         </div>
 
         <img src={select} alt="" />
@@ -273,7 +275,7 @@ const LandingPage = () => {
               }
 
             </div>
-            <q className="main">
+            <q className="main_testominal">
               <h1 id="name">{instanceTestominals.first.name}</h1>
               <i className="topleft fa-solid fa-quote-left"></i>
               <span id="paragraph">{instanceTestominals.first.paragraph}</span>

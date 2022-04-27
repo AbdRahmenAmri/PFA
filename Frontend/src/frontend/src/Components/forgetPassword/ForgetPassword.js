@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 function ForgetPassword() {
   return (
-    <div className='container'>
+    <div className='container_forgetpassword'>
         <form>
         <Link to="/Login"><FontAwesomeIcon icon={faArrowLeft} /> </Link>
             <input type="email" name="email" placeholder='Enter your email'/>

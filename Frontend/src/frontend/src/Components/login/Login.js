@@ -1,3 +1,5 @@
+import Logo from '../logo/logo'
+
 import axios from 'axios'
 import React, {useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -60,7 +62,7 @@ function Login() {
     <div className='main'>
             <div className='container_login'>
       <div className='left_div'>
-        <h1>logo</h1>
+        <Logo/>
         <h4>Welcome to our community</h4>
         <img src={img} alt="community"/>
 

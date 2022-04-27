@@ -1,10 +1,12 @@
 import './footer.css'
+
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer>
       <ul>
-        <a href="#"><li>Terms Of Service</li></a>
-        <a href="#"><li>Privacy Policy</li></a>
+        <Link to='/terms'><li>Terms Of Service</li></Link>
+        <Link to='/policy'><li>Privacy Policy</li></Link>
       </ul>
       <span>&copy; 2022 FFDEV Inc.</span>
     </footer>

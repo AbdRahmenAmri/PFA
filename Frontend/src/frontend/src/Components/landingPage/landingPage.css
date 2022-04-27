@@ -100,7 +100,7 @@ section{
     text-shadow: 0 0 20px var(--secondaryColor);
 }
 #home .text p{
-    margin-left: 30px;
+    margin: 30px;
     border-left: 6px solid var(--secondaryColor);
     padding-left: 15px;
     width: 80%;
@@ -109,7 +109,6 @@ section{
     letter-spacing: 2px;
     word-wrap: break-word;
     font-size: .9em;
-    margin-top: -20px;
     border-radius: 5px;
 }
 #home .text p span{
@@ -387,24 +386,24 @@ section{
 #testominals .container .content .users .box.active img{
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, .2);
 }
-#testominals .container .content .main{
+#testominals .container .content .main_testominal{
     position: relative;
     justify-self: center;
     width: 80%;
     quotes: none;
 }
-#testominals .container .content .main span#paragraph{
+#testominals .container .content .main_testominal span#paragraph{
     font-size: 14px;
     color: rgba(0, 0, 0, .8);
 }
-#testominals .container .content .main #name{
+#testominals .container .content .main_testominal #name{
     color: var(--thirdColor);
     font-size: 20px;
     text-align: left;
     text-transform: capitalize;
     width: 100%;
 }
-#testominals .container .content .main .topleft{
+#testominals .container .content .main_testominal .topleft{
     position: absolute;
     display: grid;
     place-items: center;
@@ -415,7 +414,7 @@ section{
     width: 30px;
     height: 30px;
 }
-#testominals .container .content .main .bottomright{
+#testominals .container .content .main_testominal .bottomright{
     display: grid;
     place-items: center;
     font-size: 24px;

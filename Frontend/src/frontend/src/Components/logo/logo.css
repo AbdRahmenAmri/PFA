@@ -1,10 +1,9 @@
 #logo{
+    position: relative;
     margin: 7px 14px;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
-    width: fit-content;
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +14,8 @@
     content: '';
     width: 40%;
     height: 100%;
-    left: 7px;
-    top: 10px;
+    left: 7%;
+    top: 21%;
     position: absolute;
     border-top: 4px #f1f1f1 solid;
 }
@@ -25,8 +24,8 @@
     content: '';
     width: 40%;
     height: 100%;
-    right: 8px;
-    bottom: 11px;
+    right: 7%;
+    bottom: 21%;
     position: absolute;
     border-bottom: 4px #f1f1f1 solid;
 }

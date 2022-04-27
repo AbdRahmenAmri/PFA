@@ -3,13 +3,15 @@ import React from 'react';
 import './App.css';
 
 import Login from './Components/login/Login'
-import {Notfound,Terms,Policy} from './Components/pages/*'
+import Notfound from './Components/pages/Notfound'
+import Policy from './Components/pages/Policy'
+import Terms from './Components/pages/Terms'
 
 import {Routes , Route , BrowserRouter} from "react-router-dom"
 import ForgetPassword from "./Components/forgetPassword/ForgetPassword";
-import LandingPage from "./Components/landingPage/LandingPage"
-import Login from "./Components/login/Login";
 import SignIn from "./Components/signin/SignIn";
+import LandingPage from "./Components/landingPage/LandingPage"
+
 
 function App() {
   return (
