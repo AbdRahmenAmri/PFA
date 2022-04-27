@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
   scroll-behavior: smooth;
 }
@@ -16,3 +17,9 @@ body {
       monospace;
   }
   
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+>>>>>>> 4e0af05b970e65ee6f9c1958799e1716712a408c
