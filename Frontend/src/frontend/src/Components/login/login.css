@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 
-.main {
-    background-color: var(--primaryColor);
+.main_login {
+    background-color: #42C2FF;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     bottom: 0;
 }
-.main .container_login .right_div,.main .container_login .left_div{
-    border-radius: 20px;
-}
-.main .container_login {
-    border-radius: 20px;
+
+.main_login .container_login {
     width: 1215px;
     height: 560px;
     margin: 50px auto;
@@ -22,7 +19,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-.main .container_login .right_div {
+.main_login .container_login .right_div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,13 +28,13 @@
     background-color: white;
 }
 
-.main .container_login .right_div h2 {
+.main_login .container_login .right_div h2 {
     color: #42C2FF;
     font-size: 40px;
 
 }
 
-.main .container_login .right_div form {
+.main_login .container_login .right_div form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -45,14 +42,14 @@
     align-items: center;
 }
 
-.main .container_login .right_div form input:not(.registerButton) {
+.main_login .container_login .right_div form input:not(.registerButton) {
     border: 2px solid #42C2FF;
     border-radius: 7px;
     padding: 10px;
     width: 311px;
 }
 
-.main .container_login .right_div form input[type=submit] {
+.main_login .container_login .right_div form input[type=submit] {
     background-color: #42C2FF;
     color: white;
     border-radius: 20px;
@@ -64,7 +61,7 @@
     cursor: pointer;
 }
 
-.main .container_login .right_div form a {
+.main_login .container_login .right_div form a {
     font-size: 11px;
     align-self: end;
     position: relative;
@@ -74,43 +71,52 @@
     color: black;
 }
 
-.main .container_login .right_div form input[type=password]::after {
+.main_login .container_login .right_div form input[type=password]::after {
     content: "Forget password ?";
 }
 
 
-.main .container_login .right_div small a {
+.main_login .container_login .right_div small a {
     text-decoration: revert;
     color: black;
     font-weight: bold;
 }
 
-.main .container_login .right_div .warn {
+.main_login .container_login .right_div .warn {
     display: none;
 }
 
-.main .container_login .left_div {
+.main_login .container_login .left_div {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--primaryColor);
+    background-color: #42C2FF;
 }
 
+.main_login .container_login .left_div h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 54px;
+}
 
-.main .container_login .left_div h4 {
-    color: var(--secondaryColor);
+.main_login .container_login .left_div h4 {
+    color: white;
     font-size: 40px;
 }
 
-.main .container_login .left_div p {
+.main_login .container_login .left_div p {
     width: 620px;
     color: white;
 }
 
-.main .container_login .left_div img {
+.main_login .container_login .left_div .img1{
+    width: 200px;
+}
+
+.main_login .container_login .left_div .img2 {
     width: 400px;
 }
 
@@ -120,7 +126,7 @@
 @media (max-width: 575.98px) {
 
 
-    .main .container_login {
+    .main_login .container_login {
         height: 90%;
         flex-wrap: wrap;
         overflow-x: scroll;
@@ -129,54 +135,54 @@
 
     }
 
-    .main .container_login .right_div {
+    .main_login .container_login .right_div {
         width: 90%;
         height: 65%;
     }
 
-    .main .container_login .right_div form {
+    .main_login .container_login .right_div form {
         height: 320px;
 
     }
 
-    .main .container_login .left_div {
+    .main_login .container_login .left_div {
         height: 25%;
     }
 
-    .main .container_login .left_div h4 {
+    .main_login .container_login .left_div h4 {
         display: none;
 
     }
 
-    .main .container_login .left_div img {
+    .main_login .container_login .left_div .img1,.img2 {
         width: 100%;
     }
 
-    .main .container_login .right_div h2 {
+    .main_login .container_login .right_div h2 {
         color: #42C2FF;
         font-size: 40px;
 
     }
 
-    .main .container_login .left_div h1 {
+    .main_login .container_login .left_div h1 {
         display: none;
     }
 
-    .main .container_login .right_div form input:not(.registerButton) {
+    .main_login .container_login .right_div form input:not(.registerButton) {
         width: 80%;
     }
 
-    .main .container_login .right_div form input[type=submit] {
+    .main_login .container_login .right_div form input[type=submit] {
         width: 80%;
 
     }
 
-    .main .container_login .right_div form a {
+    .main_login .container_login .right_div form a {
         bottom: 35px;
         right: 27px;
     }
 
-    .main .container_login .right_div form {
+    .main_login .container_login .right_div form {
         width: 100%;
 
     }
@@ -185,7 +191,7 @@
 
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .main .container_login {
+    .main_login .container_login {
         height: 90%;
         flex-wrap: wrap;
         overflow-x: scroll;
@@ -194,57 +200,57 @@
 
     }
 
-    .main .container_login .right_div {
+    .main_login .container_login .right_div {
         width: 90%;
         height: 65%;
     }
 
-    .main .container_login .left_div h4 {
+    .main_login .container_login .left_div h4 {
         display: none;
 
     }
 
-    .main .container_login .left_div h1 {
+    .main_login .container_login .left_div h1 {
         display: none;
     }
 
-    .main .container_login .left_div {
+    .main_login .container_login .left_div {
         height: 25%;
     }
 }
 
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .main .container_login {
+    .main_login .container_login {
         width: 740px;
 
     }
 
-    .main .container_login .right_div form {
+    .main_login .container_login .right_div form {
         height: 240px;
 
     }
 
-    .main .container_login .left_div h4 {
+    .main_login .container_login .left_div h4 {
         font-size: 30px;
     }
 
-    .main .container_login .right_div form input:not(.registerButton) {
+    .main_login .container_login .right_div form input:not(.registerButton) {
         width: 240px;
     }
 }
 
 @media (min-width :992px) and (max-width: 1224.98px) {
-    .main .container_login {
+    .main_login .container_login {
         width: 950px;
 
     }
 
-    .main .container_login .left_div h4 {
+    .main_login .container_login .left_div h4 {
         font-size: 34px;
     }
 
-    .main .container_login .left_div h1 {
+    .main_login .container_login .left_div h1 {
         font-size: 40px;
     }
 }

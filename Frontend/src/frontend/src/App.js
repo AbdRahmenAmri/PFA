@@ -6,7 +6,7 @@ import Login from './Components/login/Login'
 import Notfound from './Components/pages/Notfound'
 import Policy from './Components/pages/Policy'
 import Terms from './Components/pages/Terms'
-
+import HomePage from "./Components/homePage/HomePage"
 import {Routes , Route , BrowserRouter} from "react-router-dom"
 import ForgetPassword from "./Components/forgetPassword/ForgetPassword";
 import SignIn from "./Components/signin/SignIn";
@@ -26,6 +26,7 @@ function App() {
         <Route  path='/terms' element={<Terms/>}></Route>
         <Route  path='/policy' element={<Policy/>}></Route>
         <Route  path='/*' element={<Notfound/>}></Route>
+        <Route path='/home' element={<HomePage/>}></Route>
       </Routes>
     </BrowserRouter>
 

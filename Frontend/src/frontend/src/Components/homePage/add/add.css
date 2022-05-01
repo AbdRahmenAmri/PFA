@@ -1,0 +1,16 @@
+.add{
+    width: 100%;
+}
+
+.add .add_name{
+    text-decoration: none;
+}
+
+.add .add_name small{
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+}
+
+.add img{
+    width: 100%;
+}

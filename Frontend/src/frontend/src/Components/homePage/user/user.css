@@ -1,0 +1,19 @@
+.user_container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  color: var(--lightMode_fontColor);
+}
+.user_container img{
+  width: 25px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.user_container .user_infos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
