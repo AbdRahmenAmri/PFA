@@ -1,3 +1,5 @@
+import Logo from '../logo/logo'
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./signIn.css"
@@ -6,6 +8,7 @@ import axios from 'axios'
 function SignIn() {
 
   const[registerForm,setRegisterForm] = useState({
+
     username : '',
     first_name : "",
     last_name : "",
@@ -110,13 +113,14 @@ function SignIn() {
       s.style.display = "block"
     })
    }
+   console.log(registerForm);
   }
 
   return (
     <div className='main'>
             <div className='container_signin'>
       <div className='left_div'>
-        <h1>logo</h1>
+        <Logo/>
         <h4>Welcome to our community</h4>
         <img src={img} alt="community"/>
 

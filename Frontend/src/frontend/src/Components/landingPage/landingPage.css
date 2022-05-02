@@ -1,0 +1,455 @@
+.navbar{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primaryColor);
+    box-shadow: 0 5px 20px 3px rgba(255, 255, 255, .05);
+}
+
+.navbar .nav{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    justify-self: center;
+}
+
+.navbar .nav li{
+    cursor: pointer;
+    font-size: .9em;
+    padding: 7px 14px;
+    color: var(--secondaryColor);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-inline: 10px;
+    border-bottom: 3px solid var(--secondaryColor);
+    letter-spacing: 2px;
+}
+.navbar .nav li.active{
+    color: var(--thirdColor);
+    border-bottom: 3px solid var(--thirdColor);
+
+}
+.loginorregister{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+span{
+    align-self: flex-end;
+    font-size: .5em;
+    color: #fff;
+    margin-inline: 5px;
+    letter-spacing: 1px;
+}
+
+#login{
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 800;
+    color: var(--thirdColor);
+}
+#register{
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 7px 14px;
+    background-color: var(--thirdColor);
+    border-radius: 8px;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 130px;
+}
+#home{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home .text h1{
+    color: var(--secondaryColor);
+    text-transform: capitalize;
+    font-size: 2.5em;
+}
+#home .text h1 span{
+    color: var(--thirdColor);
+    text-transform: uppercase;
+    font-size: .9em;
+    text-shadow: 0 0 20px var(--secondaryColor);
+}
+#home .text p{
+    margin: 30px;
+    border-left: 6px solid var(--secondaryColor);
+    padding-left: 15px;
+    width: 80%;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    font-size: .9em;
+    border-radius: 5px;
+}
+#home .text p span{
+    color: gold;
+    text-transform: capitalize;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px gold;
+}
+
+#home #join{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    background-color: var(--thirdColor);
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+}
+
+#home img{
+    width: 30%;
+}
+
+#progress{
+    position: relative;
+}
+
+#progress .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#progress .container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#progress .container .box h1{
+    font-size: 12px;
+    text-transform: capitalize;
+    width: fit-content;
+    padding: 7px 14px;
+    background-color: var(--thirdColor);
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+#progress .container .box .content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: inherit;
+    
+}
+
+#progress .container .box .content p{
+    text-transform: capitalize;
+    align-self: center;
+    font-size: 14px;
+    color: var(--primaryColor);
+    font-weight: 800;
+    box-shadow: 0 10px 10px .1px rgba(0, 0, 0, .1);
+}
+
+#progress .container .box .content .counter{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#progress .container .box .content .counter span{
+    width: 50px;
+    height: 70px;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    margin: 2px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+}
+
+#progress .container .box .content .counter span.c{
+    color: #000;
+    background-color: rgb(255, 196, 0);
+}
+
+#progress .container .box .content .line{
+    justify-self: flex-end;
+    width: 60%;
+    height: 6px;
+    border-radius: 2px;
+    margin-block: 6px;
+    animation: lineanimate 5s ease-in-out infinite;
+    transform: skewY(0deg);
+    transform: scale(1.5);
+}
+
+@keyframes lineanimate{
+    0%,100%{
+        transform: skewY(5deg);
+        transform: scale(2);
+        width: 60%;
+    }
+    50%{
+        width: 96%;
+        transform: scale(1.5);
+        transform: skewY(-5deg);
+
+    }
+}
+
+#progress .container .box .line:nth-child(even){
+    background-color: var(--secondaryColor);
+    align-self: flex-start;
+}
+#progress .container .box .line:nth-child(odd){
+    background-color: var(--thirdColor);
+}
+
+#testominals{
+    position: relative;
+}
+
+#testominals .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80vw;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#testominals .container .big{
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    padding: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    color: var(--thirdColor);
+    z-index: 2;
+    animation: rotate360 infinite 5s linear;
+}
+@keyframes rotate360 {
+    0%{transform: rotateZ(0deg);
+        color: var(--thirdColor);}
+    100%{transform: rotateZ(360deg);
+        color: var(--secondaryColor);}
+
+}
+#testominals .container .content .box img{
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+#testominals .container aside{
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, .4);
+    margin-top: 0;
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background-color: #333;
+    margin-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#testominals .container aside::before{
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .4);
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+}
+#testominals .container aside::after{
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .4);
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+}
+#testominals .container aside h1{
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+#testominals .container aside p{
+    text-transform: capitalize;
+    width: 70%;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#testominals .container .content{
+    overflow: hidden;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to right,#fff,var(--primaryColor));
+
+}
+
+#testominals .container .content .users{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    transform: translateX(0px);
+    transition: .5s linear;
+}
+
+#testominals .container .content .users .box{
+    margin-inline-end: 20px;
+    filter: blur(1px);
+    opacity: .7;
+    transition: .5 linear;
+    transform: scale(1);
+
+}
+#testominals .container .content .users .box.active{
+    transform: scale(1.5);
+    filter: blur(0);
+    opacity: 1;
+    z-index: 2;
+    margin-left: 70px;
+    transition: .5 linear;
+}
+#testominals .container .content .users .box.active img:nth-child(1){
+    margin-left: 20px;
+}
+#testominals .container .content .users .box.active img{
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .2);
+}
+#testominals .container .content .main_testominal{
+    position: relative;
+    justify-self: center;
+    width: 80%;
+    quotes: none;
+}
+#testominals .container .content .main_testominal span#paragraph{
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+}
+#testominals .container .content .main_testominal #name{
+    color: var(--thirdColor);
+    font-size: 20px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 100%;
+}
+#testominals .container .content .main_testominal .topleft{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    top: -20px;
+    left: -20px;
+    color: var(--thirdColor);
+    width: 30px;
+    height: 30px;
+}
+#testominals .container .content .main_testominal .bottomright{
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    bottom: -20px;
+    right: -20px;
+    position: absolute;
+    color: var(--thirdColor);
+    width: 30px;
+    height: 30px;
+    transform: rotateZ(180deg);
+}
+
+#testominals .container .content .arrows{
+    position: relative;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+}
+#testominals .container .content .arrows .arrowleft,#testominals .container .content .arrows .arrowright{
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    width: 24px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#testominals .container .content .arrows .arrowleft.disable,#testominals .container .content .arrows .arrowright.disable{
+    background-color: #666;
+
+}
