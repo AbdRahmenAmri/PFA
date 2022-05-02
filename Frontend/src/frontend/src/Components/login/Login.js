@@ -44,7 +44,7 @@ function Login() {
         e.preventDefault()
         const verif = handleVerif()
         if(verif){
-          axios.post(`https://jsonplaceholder.typicode.com/users`,loginForm)
+          axios.post(`http://127.0.0.1:8000/api/token/`,loginForm)
           .then(res => {
             console.log(res);
             console.log(res.data);

@@ -8,8 +8,10 @@ import axios from 'axios'
 function SignIn() {
 
   const[registerForm,setRegisterForm] = useState({
-    firstName : "",
-    lastName : "",
+
+    username : '',
+    first_name : "",
+    last_name : "",
     email :"",
     password : "",
     confirmePassword : ""
@@ -19,20 +21,22 @@ function SignIn() {
     const{name , value} = e.target
     setRegisterForm(prevValue=>{
         switch (name) {
-          case "firstName":
+          case "first_name":
 
               return{
-                firstName : value,
-                lastName : prevValue.email,
+                username : prevValue.username,
+                first_name : value,
+                last_name : prevValue.last_name,
                 email : prevValue.email,
                 password : prevValue.password,
                 confirmePassword : prevValue.confirmePassword
               }
 
-          case "lastName":
+          case "last_name":
             return{
-              firstName : prevValue.firstName,
-              lastName : value,
+              username : prevValue.username,
+              first_name : prevValue.first_name,
+              last_name : value,
               email : prevValue.email,
               password : prevValue.password,
               confirmePassword : prevValue.confirmePassword
@@ -40,8 +44,9 @@ function SignIn() {
 
           case "email":
             return{
-              firstName : prevValue.firstName,
-              lastName : prevValue.email,
+              username : prevValue.username,
+              first_name : prevValue.first_name,
+              last_name : prevValue.last_name,
               email : value,
               password : prevValue.password,
               confirmePassword : prevValue.confirmePassword
@@ -49,8 +54,9 @@ function SignIn() {
 
           case "password":
             return{
-              firstName : prevValue.firstName,
-              lastName : prevValue.lastName,
+              username : prevValue.username,
+              first_name : prevValue.first_name,
+              last_name : prevValue.last_name,
               email : prevValue.email,
               password : value,
               confirmePassword : prevValue.confirmePassword
@@ -58,12 +64,23 @@ function SignIn() {
             
           case "confirmePassword":
             return{
-              firstName : prevValue.firstName,
-              lastName : prevValue.lastName,
+              username : prevValue.username,
+              first_name : prevValue.first_name,
+              last_name : prevValue.last_name,
               email : prevValue.email,
               password : prevValue.password,
               confirmePassword : value
-            }  
+            }
+            case "username":
+              return{
+                username : value,
+                first_name : prevValue.first_name,
+                last_name : prevValue.last_name,
+                email : prevValue.email,
+                password : prevValue.password,
+                confirmePassword : value
+              }  
+            
         
           default:
             break;
@@ -73,7 +90,7 @@ function SignIn() {
   }
 
   function handleVerif(){
-    if((registerForm.firstName.length ===0)|| (registerForm.email.indexOf("@")===-1)||(registerForm.password.length<8)||(registerForm.confirmePassword.length<8)||(registerForm.password !== registerForm.confirmePassword)){
+    if((registerForm.username.length===0)||(registerForm.first_name.length ===0)|| (registerForm.email.indexOf("@")===-1)||(registerForm.password.length<8)||(registerForm.confirmePassword.length<8)||(registerForm.password !== registerForm.confirmePassword)){
       return false
     }else{
       return true
@@ -85,7 +102,7 @@ function SignIn() {
     e.preventDefault()
     const verif = handleVerif()
    if(verif){
-    axios.post(`https://jsonplaceholder.typicode.com/users`,registerForm)
+    axios.post(`http://localhost:8000/register/`,registerForm)
     .then(res => {
       console.log(res);
       console.log(res.data);
@@ -111,9 +128,11 @@ function SignIn() {
       <div className='right_div'>
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="firstName" placeholder='FirstName' onBlur={handleVerif} onChange={handleChange}/>
+        <input type="text" name="username" placeholder='username' onBlur={handleVerif} onChange={handleChange}/>
+        <small>your username should be more than 0 characters</small>
+          <input type="text" name="first_name" placeholder='first_name' onBlur={handleVerif} onChange={handleChange}/>
           <small>your name should be more than 0 characters</small>
-          <input type="text" name="lastName" placeholder='lastName' onBlur={handleVerif} onChange={handleChange}/>
+          <input type="text" name="last_name" placeholder='last_name' onBlur={handleVerif} onChange={handleChange}/>
           <small>your name should be more than 0 characters</small>
           <input type="email" name="email" placeholder='Email' onBlur={handleVerif}  onChange={handleChange}/>
           <small>email should conatin "@" , "." !</small>
