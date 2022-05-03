@@ -203,7 +203,7 @@ const LandingPage = () => {
           <Link to='/Signin'><span id="register">Register</span></Link>
         </div>
       </div>
-      <section id="home">
+      <section id="home" className='lsection'>
         <div className="text">
           <h1>
             Stop losing your <span>time !!</span><br />
@@ -218,7 +218,7 @@ const LandingPage = () => {
 
         <img src={select} alt="" />
       </section>
-      <section id="progress">
+      <section id="progress" className='lsection'>
         <div className="container">
           <div className="box" id="articles">
             <h1>articles</h1>
@@ -256,7 +256,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section id="testominals">
+      <section id="testominals" className='lsection'>
         <div className="container">
         <i className="big fa-solid fa-quote-left"></i>
           <aside>

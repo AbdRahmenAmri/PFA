@@ -1,0 +1,41 @@
+{
+    "head":{
+        "cnv_id": "fffffffff",
+        "name": "mohamed haj ali",
+        "profile_pic": "/assets/user-pic/user1.jpeg",
+        "is_active": true
+    },
+    "conversations":[
+        {
+            "is_you_sender":true,
+            "is_msg":true,
+            "msg": "haj ali ezreb ekhdm ray khlet 3la rousna",
+            "date":"thursday, 3 May at 01:08",
+            "is_images":false,
+            "is_videos":false,
+            "is_files":false
+        },
+        {
+            "is_you_sender":true,
+            "is_msg":true,
+            "msg": "chouf ena chnw khdemt",
+            "date":"thursday, 3 May at 01:14",
+            "is_images":true,
+            "is_videos":true,
+            "is_files":false,
+            "is_links":true,
+            "videos":["/assets/background.mp4"],
+            "links":["https://g4pfa.pythonanywhere.com/"],
+            "images":["/assets/uchiha-sasuke-naruto-ix-1680x1050.jpg","/assets/wallpapersden.com_akatsuki-naruto_2560x1440.jpg","/assets/wp5580268.jpg"]
+        },
+        {
+            "is_you_sender":false,
+            "is_msg":true,
+            "msg": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+            "date":"thursday, 4 May at 13:58",
+            "is_images":false,
+            "is_videos":false,
+            "is_files":false
+        }
+    ]
+}
