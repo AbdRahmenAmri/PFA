@@ -67,7 +67,7 @@ span{
     border-radius: 8px;
 }
 
-section{
+.lsection{
     position: relative;
     width: 100%;
     min-height: 100vh;
