@@ -1,10 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework_simplejwt.tokens import RefreshToken
-
+from rest_framework.generics import *
 from .serializers import UserSerializer
-from users.models import  MyUser
+from rest_framework.permissions import IsAuthenticated
+from users.models import MyUser
 
 
 @api_view(['POST'])
@@ -28,3 +29,16 @@ def registration_view(request):
         return Response(data)
     else:
         return Response(serializer.errors)
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserSerializer
+    queryset = MyUser.objects.all()
+
+
+
+
+
+
+

@@ -1,8 +1,10 @@
+from django.conf.urls.static import static
 from django.urls import path, include
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from django.conf import settings
 from .views import registration_view
 
 urlpatterns = [
@@ -13,3 +15,4 @@ urlpatterns = [
 SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True
 }
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

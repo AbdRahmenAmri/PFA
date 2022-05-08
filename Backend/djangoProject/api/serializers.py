@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MyUser
-        fields = ['username' ,'first_name', 'last_name', 'email', 'password']
+        fields = ['username', 'first_name', 'last_name', 'email', 'password']
         extra_kwargs = {
             'password': {'write_only': True}
         }
@@ -28,6 +28,7 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
 # class RegisterSerializer(serializers.ModelSerializer):
 #     profile = ProfileSerializer(required=False)
 #
@@ -37,3 +38,9 @@ class UserSerializer(serializers.ModelSerializer):
 #         extras_kwargs = {
 #             'password': {'write_only': True}
 #         }
+
+# User profile configuration serializer
+class UserProfileConfigSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MyUser
+        fields = ["username", "first_name", "last_name", "date_of_birth", "description"]
