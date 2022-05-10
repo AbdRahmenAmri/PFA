@@ -37,10 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework_simplejwt',
     'users.apps.UsersConfig',
     'rest_framework',
     'corsheaders',
+<<<<<<< HEAD
 
+=======
+    "post",
+>>>>>>> a709d7bab941b2a732dafc2e8ac099d23b26d038
 ]
 
 CORS_ORIGIN_WHITELIST = [
@@ -57,7 +62,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
 
+=======
+    "corsheaders.middleware.CorsMiddleware",
+>>>>>>> a709d7bab941b2a732dafc2e8ac099d23b26d038
 ]
 
 ROOT_URLCONF = 's2n.urls'
