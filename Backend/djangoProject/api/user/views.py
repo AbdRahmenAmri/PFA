@@ -7,7 +7,8 @@ from .serializers import UserSerializer
 from rest_framework.permissions import IsAuthenticated
 from users.models import MyUser
 
-"""ViewSet ==> A ViewSet class is simply a type of class-based View, 
+"""
+ViewSet ==> A ViewSet class is simply a type of class-based View, 
 that does not provide any method handlers such as .get() or 
 .post(), and instead provides actions such as .list() and .create()."""
 
@@ -18,7 +19,8 @@ The example above would generate the following URL patterns:
 URL pattern: ^users/$ Name: 'user-list'
 URL pattern: ^users/{pk}/$ Name: 'user-detail'
 URL pattern: ^accounts/$ Name: 'account-list'
-URL pattern: ^accounts/{pk}/$ Name: 'account-detail'"""
+URL pattern: ^accounts/{pk}/$ Name: 'account-detail'
+"""
 
 @api_view(['POST'])
 def registration_view(request):

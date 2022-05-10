@@ -23,7 +23,7 @@ class MyUser(AbstractUser):
     description = models.CharField(max_length=500, blank=True, null=True)
     second_email = models.EmailField(max_length=300, blank=True, null=True)
     # profile_img = models.ImageField(null=True, blank=True)
-    bio = models.CharField(max_length=20, blank=True, null=True)
+    profession = models.CharField(max_length=70, blank=True, null=True)
     social_github = models.URLField(blank=True, null=True)
     social_facebook = models.URLField(blank=True, null=True)
     social_instagram = models.URLField(blank=True, null=True)

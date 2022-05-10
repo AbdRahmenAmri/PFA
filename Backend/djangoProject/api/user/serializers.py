@@ -44,4 +44,3 @@ class UserProfileConfigSerializer(serializers.ModelSerializer):
     class Meta:
         model = MyUser
         fields = ["username", "first_name", "last_name", "date_of_birth", "description"]
-class Arti
