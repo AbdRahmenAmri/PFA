@@ -45,3 +45,5 @@ class UserImage(models.Model):
     image = models.ImageField(upload_to=user_directory_path, default='')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, )
     title = models.CharField
+
+# TODO: add image model
