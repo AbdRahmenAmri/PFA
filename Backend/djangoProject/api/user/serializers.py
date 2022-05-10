@@ -41,7 +41,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 # User profile configuration serializer
 class UserProfileConfigSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(validators=[not required])
     class Meta:
         model = MyUser
         fields = ["username", "first_name", "last_name", "date_of_birth", "description"]
-class Arti
+
+
+
+

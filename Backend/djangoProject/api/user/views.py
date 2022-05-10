@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import generics, viewsets
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.generics import *
-from .serializers import UserSerializer
+from .serializers import (UserSerializer, UserProfileConfigSerializer)
 from rest_framework.permissions import IsAuthenticated
 from users.models import MyUser
 
@@ -44,9 +44,12 @@ def registration_view(request):
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
-    serializer_class = UserSerializer
-    queryset = MyUser.objects.get()
+    # permission_classes = [IsAuthenticated]
+    serializer_class = UserProfileConfigSerializer
+    queryset = MyUser.objects.all()
+
+
+
 
 
 

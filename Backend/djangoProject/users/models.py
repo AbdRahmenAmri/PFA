@@ -22,7 +22,7 @@ class MyUser(AbstractUser):
     date_of_birth = models.DateTimeField(auto_now=True, null=True, blank=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     second_email = models.EmailField(max_length=300, blank=True, null=True)
-    # profile_img = models.ImageField(null=True, blank=True)
+    # image = models.ImageField(_("Image"),upload_to=user_directory_path,)
     bio = models.CharField(max_length=20, blank=True, null=True)
     social_github = models.URLField(blank=True, null=True)
     social_facebook = models.URLField(blank=True, null=True)
