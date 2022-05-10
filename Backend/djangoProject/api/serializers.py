@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(validators=[required])
     last_name = serializers.CharField(validators=[required])
     email = serializers.EmailField(validators=[required])
-
+    bgt
     class Meta:
         model = MyUser
         fields = ['username', 'first_name', 'last_name', 'email', 'password']
