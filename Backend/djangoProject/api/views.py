@@ -7,6 +7,18 @@ from .serializers import UserSerializer
 from rest_framework.permissions import IsAuthenticated
 from users.models import MyUser
 
+"""ViewSet ==> A ViewSet class is simply a type of class-based View, 
+that does not provide any method handlers such as .get() or 
+.post(), and instead provides actions such as .list() and .create()."""
+
+"""Routes ==> There are two mandatory arguments to the register() method:
+prefix - The URL prefix to use for this set of routes.
+viewset - The viewset class.
+The example above would generate the following URL patterns:
+URL pattern: ^users/$ Name: 'user-list'
+URL pattern: ^users/{pk}/$ Name: 'user-detail'
+URL pattern: ^accounts/$ Name: 'account-list'
+URL pattern: ^accounts/{pk}/$ Name: 'account-detail'"""
 
 @api_view(['POST'])
 def registration_view(request):
@@ -34,7 +46,7 @@ def registration_view(request):
 class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     serializer_class = UserSerializer
-    queryset = MyUser.objects.all()
+    queryset = MyUser.objects.get()
 
 
 
