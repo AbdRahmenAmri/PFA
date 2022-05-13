@@ -1,0 +1,119 @@
+[
+    {   
+        "cnv_id": "fffffffff",
+        "name": "mohamed haj ali",
+        "profile_pic": "/assets/user-pic/user1.jpeg",
+        "last_msg": "focus on your future go sleep idiot focus on your future go sleep idiot focus on your future go sleep idiot",
+        "is_active": true,
+        "is_you":true
+
+
+    },
+    {
+        "cnv_id": "ffffffffe",
+        "name": "cheker elj",
+        "profile_pic": "/assets/user-pic/user2.jpg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "12m",
+        "is_you": false,
+        "is_read":true
+    },
+    {
+        "cnv_id": "ffffffffz",
+        "name": "khalil jabri",
+        "profile_pic": "/assets/user-pic/user3.jpeg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "2d",
+        "is_you": false,
+        "is_read":false
+    },
+    {
+        "cnv_id": "ffffffffa",
+        "name": "mohamed hedi aboucha",
+        "profile_pic": "/assets/user-pic/user4.webp",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "5h",
+        "is_you": false,
+        "is_read":true
+    },
+    {   
+        "cnv_id": "fffffffff",
+        "name": "mohamed haj ali",
+        "profile_pic": "/assets/user-pic/user1.jpeg",
+        "last_msg": "focus on your future go sleep idiot focus on your future go sleep idiot focus on your future go sleep idiot",
+        "is_active": true,
+        "is_you": true
+
+    },
+    {
+        "cnv_id": "ffffffffe",
+        "name": "cheker elj",
+        "profile_pic": "/assets/user-pic/user2.jpg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "12m",
+        "is_you": true
+    },
+    {
+        "cnv_id": "ffffffffz",
+        "name": "khalil jabri",
+        "profile_pic": "/assets/user-pic/user3.jpeg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "2d",
+        "is_you": false,
+        "is_read":false
+    },
+    {
+        "cnv_id": "ffffffffa",
+        "name": "mohamed hedi aboucha",
+        "profile_pic": "/assets/user-pic/user4.webp",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "5h",
+        "is_you": false,
+        "is_read":false
+    },
+    {   
+        "cnv_id": "fffffffff",
+        "name": "mohamed haj ali",
+        "profile_pic": "/assets/user-pic/user1.jpeg",
+        "last_msg": "focus on your future go sleep idiot focus on your future go sleep idiot focus on your future go sleep idiot",
+        "is_active": true,
+        "is_you": true
+
+    },
+    {
+        "cnv_id": "ffffffffe",
+        "name": "cheker elj",
+        "profile_pic": "/assets/user-pic/user2.jpg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "12m",
+        "is_you": false,
+        "is_read":true
+    },
+    {
+        "cnv_id": "ffffffffz",
+        "name": "khalil jabri",
+        "profile_pic": "/assets/user-pic/user3.jpeg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "2d",
+        "is_you": false,
+        "is_read":true
+    },
+    {
+        "cnv_id": "ffffffffa",
+        "name": "mohamed hedi aboucha",
+        "profile_pic": "/assets/user-pic/user4.webp",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "5h",
+        "is_you": false,
+        "is_read":false
+    }
+]

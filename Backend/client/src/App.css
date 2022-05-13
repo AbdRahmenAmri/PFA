@@ -1,0 +1,13 @@
+:root{
+  --primaryColor : rgb(17, 26, 38);
+  --secondaryColor : #00b0ff;
+  --thirdColor : #ff0033;
+}
+
+*{
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--primaryColor);
+}

@@ -1,0 +1,10 @@
+{
+    "head":{
+        "name": "cheker elj",
+        "profile_pic": "/assets/user-pic/user2.jpg",
+        "last_msg": "focus on your future go sleep idiot",
+        "is_active": false,
+        "last_seen": "12m"
+    },
+    "conversations":[]
+}

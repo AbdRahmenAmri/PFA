@@ -1,0 +1,402 @@
+.messages-root{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "messages-users messages-main messages-details";
+    grid-template-columns: 25% 50% 25%;
+}
+
+.messages-users{
+    grid-area: messages-users;
+    padding: 3vh;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+.messages-main{
+    grid-area: messages-main;
+    border-left: 1px solid rgba(255,255,255,.2);
+    border-right: 1px solid rgba(255,255,255,.2);
+    overflow: hidden;
+}
+
+.messages-details{
+    grid-area: messages-details;
+    display: grid;
+    grid-template-rows: 10vh 10vh auto;
+}
+
+.messages-header{
+    position: relative;
+    display: grid;
+    grid-template-rows: 7vh 12vh;
+}
+
+.messages-head{
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+}
+
+.messages-head h4{
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: .1vw;
+    font-size: 1.4rem;
+    align-self: center;
+}
+
+.messages-head i{
+    cursor: pointer;
+    color: var(--secondaryColor);
+    font-size: 1.1rem;
+    align-self: center;
+}
+
+.messages-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 4vh;
+}
+
+.messages-box span{
+    cursor: pointer;
+    position: relative;
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,.3);
+    font-size: .7rem;
+    text-transform: capitalize;
+    border-radius: 4px;
+}
+
+.messages-box span.active{
+    background-color: rgba(255,255,255,.2);
+}
+
+.messages-messages{
+    position: relative;
+    overflow: auto;
+    height: 77vh;
+}
+
+.messages-msgbox{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    margin-block: 1vh;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 60px auto;
+    cursor: pointer;
+}
+
+.messages-msgbox img{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 15%;
+}
+
+.messages-msgbox-text{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: .5vw;
+    display: grid;
+    grid-template-rows: 30% auto;
+}
+
+.messages-msgbox-name{
+    position: relative;
+    text-overflow: ellipsis;
+    color: #fff;
+    font-size: .8rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    align-self: end;
+}
+
+.messages-msgbox-details{
+    position: relative;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-content: center;
+    padding-bottom: 2vh;
+}
+
+.messages-msgbox-details p{
+    position: relative;
+    text-overflow: ellipsis;
+    font-size: .8rem;
+    font-weight: 100;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.messages-msgbox-details span{
+    position: relative;
+    justify-self: center;
+    align-self: start;
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 400;
+}
+
+.messages-msgbox-you{
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.messages-msgbox-active,.messsages-main-head-details-active{
+    background-color: rgb(0, 255, 64);
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+}
+
+.messsages-main-head{
+    position: relative;
+    width: calc(100%-1vw);
+    height: 70px;
+    padding: 1vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow:hidden;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+.messsages-main-head-details{
+    position: relative;
+    width: 80%;
+    display:flex;
+    align-items: center;
+}
+
+.messsages-main-head-details img {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 15%;
+}
+
+.messsages-main-head-details-name{
+    padding-inline: 2vw;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+.messsages-main-head-details-active{
+    align-self: center;
+}
+.messsages-main-head-calls{
+    position: relative;
+    width: 20%;
+    display:flex;
+    justify-content: space-evenly;
+    padding: 1vw;
+    align-items: center;
+}
+
+.messsages-main-head-calls i{
+    color:var(--secondaryColor);
+    font-size: 20px;
+    cursor:pointer;
+}
+.messages-conversation{
+    position: relative;
+    width: calc(100% - (1vw + 2vh));
+    height: 65vh;
+    overflow: auto;
+    display:flex;
+    flex-direction: column;
+    padding:2vh;
+    grid-gap:-5vh;
+}
+.messages-main-message{
+    max-width: 30vw;
+    padding:7px 14px;
+    width: fit-content;
+    height:fit-content;
+    color:#fff;
+    border-radius: 10px;
+    display:grid;
+    place-items: center  start;
+    margin-block:1vh;
+}
+.messages-main-message img,.messages-main-message video{
+    width: 30vw;
+    object-fit:contain;
+    margin: 1vh;
+}
+
+.messages-inputs{
+    position: relative;
+    width: calc(100% - 1vw);
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: space-evenly;
+    align-items: center;
+    height:15vh;
+}
+
+.messages-inputs textarea{
+    position: relative;
+    resize: none;
+    width: 30vw;
+    height: 30px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 7px;
+    padding:7px 14px;
+    border:1px solid rgba(255,255,255,.2);
+    outline: none;
+
+}
+
+.messages-inputs i{
+    cursor: pointer;
+    color: var(--secondaryColor);
+    font-size: 24px;
+    display: grid;
+    place-items: center;
+}
+
+.messages-inputs label{
+    display: grid;
+    place-items: center;
+}
+
+.messages-inputs input[type="file"]{
+    display:none;
+}
+
+.messsages-main-head-details-last_seen{
+    color: rgba(255,255,255,.7);
+    font-size: .8rem;
+    align-self:center;
+}
+
+.messages-details h4{
+    place-self: center;
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.messages-details-types{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.messages-details-types span{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: .8rem;
+    cursor: pointer
+}
+
+.messages-details-types span.active{
+    color: var(--secondaryColor);
+    text-shadow: 0 0 13px var(--secondaryColor);
+}
+
+.messages-details-content{
+    position:relative;
+    width: 95%;
+    justify-self: center;
+    margin-top:2vh;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    grid-gap: 1vh;
+}
+
+.messages-details-content img,.messages-details-content video {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+}
+
+.messages-details-content i.no-content{
+    position: absolute;
+    color: #fff;
+    place-self: center;
+    font-size:1.2rem
+}
+
+.startcnv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    background-color: #333;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+
+
+}
+
+.start-user{
+    position: relative;
+    width: 80%;
+    height: 70px;
+    overflow: hidden;
+    margin-block: 5px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.start-user img{
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.start-user span{
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.start-start{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
