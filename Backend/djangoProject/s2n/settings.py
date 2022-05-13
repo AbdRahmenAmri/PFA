@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v=r8v#6vob7+0d(+8tfncps&#=rcdmu3bp@0w&+!56v013(tk9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','*']
 
 AUTH_USER_MODEL = 'users.MyUser'
 # Application definition
@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'rest_framework',
     'corsheaders',
-<<<<<<< HEAD
 
-=======
+
+
     "post",
->>>>>>> a709d7bab941b2a732dafc2e8ac099d23b26d038
+
 ]
 
 CORS_ORIGIN_WHITELIST = [
@@ -62,11 +62,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-<<<<<<< HEAD
 
-=======
+
+
     "corsheaders.middleware.CorsMiddleware",
->>>>>>> a709d7bab941b2a732dafc2e8ac099d23b26d038
+
 ]
 
 ROOT_URLCONF = 's2n.urls'
@@ -146,9 +146,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORKS = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ]
 }
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',

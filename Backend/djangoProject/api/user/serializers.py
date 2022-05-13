@@ -1,4 +1,6 @@
 from rest_framework import serializers
+
+from api.post.serializers import InterestSerializer
 from users.models import *
 
 
@@ -15,9 +17,10 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MyUser
-        fields = ['username', 'first_name', 'last_name', 'email', 'password']
+        fields = ['username', 'first_name', 'last_name', 'email', 'password', ]
         extra_kwargs = {
-            'password': {'write_only': True}
+            'password': {'write_only': True},
+
         }
 
     def create(self, validated_data):
@@ -41,14 +44,26 @@ class UserSerializer(serializers.ModelSerializer):
 
 # User profile configuration serializer
 class UserProfileConfigSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(validators=[not required])
     class Meta:
         model = MyUser
-        fields = ["username", "first_name", "last_name", "date_of_birth", "description"]
-<<<<<<< HEAD
+        fields = ["username", "first_name", "last_name", "image", "description", "password"]
+        # extra_kwargs = {
+        #     'username': {'required': False}, 'first_name': {'required': False}, 'last_name': {'required': False},
+        #     'image': {'required': False},
+        # }
+
+    def create(self, validated_data):
+        password = validated_data.pop('password', None)
+        instance = self.Meta.model(**validated_data)
+        if password is not None:
+            instance.set_password(password)
+        instance.save()
+        return instance
 
 
+class UserPostInterestSerialiazer(serializers.ModelSerializer):
+    interests = InterestSerializer(many=True, read_only=True)
 
-
-=======
->>>>>>> a709d7bab941b2a732dafc2e8ac099d23b26d038
+    class Meta:
+        model = MyUser
+        fields = ["interests"]

@@ -4,12 +4,13 @@ from django.contrib.auth.models import AbstractUser, User
 from django.db import models
 import uuid
 from django.utils.translation import gettext_lazy as _
+from post.models import Interest
 
 
 # Create your models here.
 
 def user_directory_path(instance, filename):
-    return 'images/{0}/'.format(filename)
+    return 'users/{filename}'.format(filename=filename)
 
 
 class MyUser(AbstractUser):
@@ -23,16 +24,19 @@ class MyUser(AbstractUser):
     description = models.CharField(max_length=500, blank=True, null=True)
     second_email = models.EmailField(max_length=300, blank=True, null=True)
 
-    # image = models.ImageField(_("Image"),upload_to=user_directory_path,)
+    image = models.ImageField(_("Image"), upload_to=user_directory_path,default='users/user.png',null=True )
     bio = models.CharField(max_length=20, blank=True, null=True)
 
     # profile_img = models.ImageField(null=True, blank=True)
     profession = models.CharField(max_length=70, blank=True, null=True)
-
     social_github = models.URLField(blank=True, null=True)
     social_facebook = models.URLField(blank=True, null=True)
+    interset = models.ManyToManyField(Interest,)
     social_instagram = models.URLField(blank=True, null=True)
     social_twitter = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return str(self.username)
 
 
 class Category(models.Model):
